@@ -72,3 +72,18 @@ def perimeter(a):
     '''
     return 4 * a
 ```
+### Add rectangle.py
+
+> Commit hash: 305a3a94809db44dd5619cee6ce643ec3f23986b
+
+### Added a description of the circle functions
+
+> Commit hash: 40b344f0e72c562320e51e32077149c24f939801
+
+### Added a description of the rectangle functions
+
+> Commit hash: 9c2b15c7991db79057150f4a703c48e022e2a8cb
+
+### Added a description of the square functions
+
+> Commit hash: 4d5cc2c0fe6d1b4bc2901e4af3d4e49b9ff36acf
