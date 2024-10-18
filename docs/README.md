@@ -99,6 +99,54 @@ def perimeter(a, b, c):
     '''
     return a + b + c
 ```
+### calculate.py
+``` python
+import circle
+import square
+
+'''Импортирем модули "circle" и "square"'''
+
+figs = ['circle', 'square']
+funcs = ['perimeter', 'area']
+
+'''Объявляем списки доступных фигур и функций'''
+
+sizes = {}
+
+'''Создаем словарь для хранения размеров фигур'''
+
+
+def calc(fig, func, size):
+    '''Создаём функцию для вычисления периметра или площади'''
+    assert fig in figs
+    '''Проверяем, что фигура допустима'''
+    assert func in funcs
+    '''Проверяем, что функция допустима'''
+
+    '''Вычисляем результат с помощью динамического вызова метода'''
+    result = eval(f'{fig}.{func}(*{size})')
+    print(f'{func} of {fig} is {result}')
+    '''Выводим результат'''
+
+
+if __name__ == "__main__":
+    '''Проверяем, запущен ли скрипт напрямую'''
+    func = ''
+    fig = ''
+    size = list()
+'''Запрашиваем фигуру до тех пор, пока не введем допустимую'''
+while fig not in figs:
+    fig = input(f"Enter figure name, avaliable are {figs}:\n")
+'''Запрашиваем функцию до тех пор, пока не введем допустимую'''
+while func not in funcs:
+    func = input(f"Enter function name, avaliable are {funcs}:\n")
+'''Запрашиваем размеры до тех пор, пока их количество не совпадет с необходимым'''
+while len(size) != sizes.get(f"{func}-{fig}", 1):
+    size = list(map(int, input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')))
+
+calc(fig, func, size)
+'''Вызываем функцию для расчета'''
+```
 ### Added rectangle.py and description of the rectangle functions
 
 > Commit hash: 4032c81c9c80e8d33a3823c37d9137da71c67079
@@ -114,3 +162,7 @@ def perimeter(a, b, c):
 ### Added description of the square functions
 
 > Commit hash: e8789df349191afe6dba7fe45f5215f62df6a166
+
+### Added description of the calculate functions
+
+> Commit hash: 279625d78e9e1cbdf7ff6333639761a58d01a5b9
